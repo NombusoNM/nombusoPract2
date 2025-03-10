@@ -102,7 +102,9 @@ th, td {
     padding: 20px;
     text-align: center;
 }
-
+people_table {
+    background-color: white;
+}
 th {
     background-color: white;
 }
