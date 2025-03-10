@@ -7,29 +7,33 @@
     ViewBag.Title = "List of People";
 }
 
+<style>
+    body{
+        background-color:floralwhite;
+    }
+</style>
+
 <h2>List of People</h2>
 
 @*<p>
         @Html.ActionLink("Create New", "Create") >> In this overload it is the name and the action >> Link going nowhere.
     </p>*@
-<table class="people_table">
-    <tr >
-        <th>
+<table class="people_table" style="color: hotpink; background-color: floralwhite;">
+    <tr>
+        <th style="background-color:floralwhite;">
             @Html.DisplayNameFor(model => model.StudentNumber)
         </th>
-        <th>
+        <th style="background-color:floralwhite;">
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th>
+        <th style="background-color:floralwhite;">
             @Html.DisplayNameFor(model => model.Surname)
         </th>
-        <th>
+        <th style="background-color:floralwhite;">
             @Html.DisplayNameFor(model => model.Email)
-        <th>
+        <th style="background-color:floralwhite;">
             @Html.DisplayNameFor(model => model.myLink)
         </th>
-        
-        <th></th>
     </tr>
 
     @foreach (var item in Model) //For each person
@@ -55,7 +59,7 @@
             @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>*@
             <td>
-                <a class="btn btn-success" href="@Url.Content(item.myLink)" target="_blank">Link To Personal Page</a>
+                <a class="btn btn-success" href="@Url.Content(item.myLink)" target="_blank" style="background-color:hotpink;">Link To Personal Page</a>
 
             </td>
         </tr>
