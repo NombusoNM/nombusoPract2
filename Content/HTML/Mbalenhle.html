@@ -1,99 +1,97 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Mbalenhle - Profile</title>
-    <link href="../Content/Styling.css" rel="stylesheet" />
-    <link href="\Content\HTML\SStyling.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mbalenhle -Profile</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- External Custom CSS -->
+    <link href="../Content/StyleSheet1.css" rel="stylesheet" />
 </head>
-<body>
-
-
+<body style="text-align: center; background-color: lightpink;">
     <header>
         <h1>
             Mbalenhle Mdletshe
         </h1>
     </header>
-    <nav>
-
-        <div class="main-content">
-
-            <hr />
-            <div class="links">
-                <div class="p-2"><a href="/Home/Index">Main</a></div>
-                <div class="p-2"><a href="/People/ListPeople">List</a></div>
-                <div class="p-2"><a href="../HTML/Nombuso.html">Nombuso</a></div>
-                <div class="active"><a href="../HTML/Mbalenhle.html">Mbalenhle</a></div>
-                <div class="p-2"><a href="../HTML/Nothando.html">Nothando</a></div>
-                <div class="p-2"><a href="../HTML/Laska.html">Laska</a></div>
-                <div class="p-2"><a href="../HTML/Lola.html">Lola</a></div>
-                <div><a href="javascript:history.back()">Back</a></div>
-            </div>
-            <hr />
-        </div>
-
-
+    <!-- Navigation Menu -->
+    <nav class="mb-4 " style="background-color: hotpink;">
+        <ul class="nav nav-pills justify-content-center  p-2" >
+            <li class="nav-item"><a class="nav-link text-black" href="/Home/Index">Main</a></li>
+            <li class="nav-item"><a class="nav-link text-black" href="/People/ListPeople">List</a></li>
+            <li class="nav-item"><a class="nav-link text-black" href="../HTML/Nombuso.html">Nombuso</a></li>
+            <li class="nav-item"><a class="nav-link text-black" href="../HTML/Laska.html">Laska</a></li>
+            <li class="nav-item"><a class="nav-link active customs-bg" href="../HTML/Mbalenhle.html">Mbalenhle</a></li>
+            <li class="nav-item"><a class="nav-link text-black" href="../HTML/Nothando.html">Nothando</a></li>
+            <li class="nav-item"><a class="nav-link text-black" href="../HTML/Lola.html">Lola</a></li>
+            <li class="nav-item"><a class="nav-link text-black" href="javascript:history.back()">Back</a></li>
+        </ul>
     </nav>
 
-    <!-- Biography -->
-    <div class="bio">
-        <h2>Biography and Background</h2>
-        <div class="content-flex">
-            <img class="bio-img" src="..\HTML\Images\Mbalenhle 1.jpeg" alt="Mbalenhle Image" />
-            <p>
-                Mbalenhle Mdletshe was born in Johannesburg, and she went to school in Germiston.
-                She studies BEng and majors in Computer Engineering.
-            </p>
+    <!-- Bootstrap Grid Layout for 3 Sections -->
+    <div class="container">
+        <div class="row text-start">
+
+            <!-- Biography Section -->
+            <div class="card mt-4">
+                <div class="bg-transparent bg-white rounded shadow w-100">
+                    <h2 class="card-header">Biography and Background</h2>
+                    <img src="../HTML/Images/Mbalenhle 1.jpeg" alt="Person Image" class="img-fluid float-start me-2 mb-2" style="width: 100px;" />
+                    <p class="card-body">
+                        Mbalenhle is a 20-year-old BIT IS student who lives with her sister. She’s passionate about tech and believes in using
+                        digital skills to help people.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Hobbies Section -->
+            <div class="card mt-4">
+                <div class="bg-transparent p-3 bg-white rounded shadow w-100">
+                    <h2 class="card-header">Hobbies</h2>
+                    <img src="../HTML/Images/Mbalenhle 3.jpg" alt="Hobbies Image" class="img-fluid float-end ms-2 mb-2" style="width: 100px;" />
+                    <p class="card-body">
+                        In her free time, Mbalenhle enjoys crochet and plays netball with her friends. She also posts about her fitness journey
+                        online and enjoys crafting projects on weekends.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modules Section -->
+            <div class="card mt-4">
+                <div class="bg-transparent p-3 bg-white rounded shadow w-100">
+                    <h2 class="card-header">Modules</h2>
+                    <table class="table table-sm table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Semester 1</th>
+                                <th>Semester 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    INF214<br />
+                                    INF272<br />
+                                    INF271<br />
+                                </td>
+                                <td>
+                                    INF271<br />
+                                    INF251<br />
+                                    INF264<br />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
-    </div>
-
-
-    <!-- Hobbies -->
-
-    <div class="bio hobbies">
-        <h2>Biography and Background</h2>
-        <div class="content-flex">
-            <img class="bio-img" src="..\HTML\Images\Mbalenhle 3.jpg"  alt="Mbalenhle Image" />
-            <p>
-                In her spare time, Mbalenhle enjoys knitting and sewing, finding joy in creating unique designs with every stitch. These crafts provide her with a sense of relaxation and accomplishment as she brings her ideas to life. She takes pride in the patience and precision required, always eager to learn new techniques. With a passion for handmade artistry, Mbalenhle embraces the timeless charm of working with yarn and fabric.
-            </p>
-        </div>
-    </div>
-
-
-    <!-- Modules -->
-
-    <div class="bio">
-        <h2>Modules</h2>
-
-        <table class="table_module">
-            <thead>
-                <tr>
-                    <th>Modules Semester 1</th>
-                    <th>Modules Semester 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        BES 200<br>
-                        COS 212 <br>
-                        EIR 211 <br>
-                        EIW 221<br>
-                        EJJ 210 <br>
-                        EMR 220
-                    </td>
-                    <td>
-                        WTW 238<br>
-                        WTW 256<br>
-                        WTW 258<br>
-                        WTW 263<br>
-                        NMC 113<br>
-                        ERS 220
-                    </td>
-                </tr>
-            </tbody>
-        </table>
     </div>
 </body>
 </html>

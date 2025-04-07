@@ -1,5 +1,4 @@
-﻿
-@* Interface Enumarable = Enumarate or list (to ascertain the number of : count) *@
+﻿@* Interface Enumarable = Enumarate or list (to ascertain the number of : count) *@
 
 @model IEnumerable<nombusoStudyGroup.Models.PersonModel>
 
@@ -8,8 +7,8 @@
 }
 
 <style>
-    body{
-        background-color:floralwhite;
+    body {
+        background-color: floralwhite;
     }
 </style>
 
@@ -34,6 +33,9 @@
         <th style="background-color:floralwhite;">
             @Html.DisplayNameFor(model => model.myLink)
         </th>
+        <th style="background-color:floralwhite;">
+            @Html.DisplayNameFor(model => model.myDelete)
+        </th>
     </tr>
 
     @foreach (var item in Model) //For each person
@@ -52,17 +54,33 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-
-            @*<td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>*@
             <td>
-                <a class="btn btn-success" href="@Url.Content(item.myLink)" target="_blank" style="background-color:hotpink;">Link To Personal Page</a>
-
+                <a href="@Url.Content(item.myLink)" target="_blank" class="btn btn-primary">Link</a>
             </td>
+            <td>
+            <button class="btn btn-primary delete-button" onclick="delete_row(this)">Delete</button>
+            </td>
+           
+
         </tr>
     }
-
 </table>
+
+<script>
+    // Delete ROW on button click
+    // Delete remove the row that contains the clicked button
+    document.querySelectorAll(".delete-button").forEach(button => {
+        button.addEventListener("click", function () {
+            const row = this.closest("tr");
+            row.remove();
+        });
+    });
+
+    // Highlight rows where first name starts with "N"
+    document.querySelectorAll("tbody tr").forEach(row => {
+        const firstName = row.children[1].textContent.trim();
+        if (firstName.startsWith("N")) {
+            row.style.color = "red";
+        }
+    });
+</script>

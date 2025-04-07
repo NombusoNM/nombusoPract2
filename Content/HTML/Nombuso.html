@@ -1,14 +1,21 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nombuso - Profile</title>
-    <link href="../Content/Styling.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- External Custom CSS -->
+    <link href="\Content\HTML\Styling.css" rel="stylesheet" />
     <link href="\Content\HTML\SStyling.css" rel="stylesheet" />
 </head>
 <body>
-
-
     <header>
         <h1>
             Nombuso Mdletshe
@@ -22,12 +29,12 @@
             <div class="links">
                 <div class="p-2"><a href="/Home/Index">Main</a></div>
                 <div class="p-2"><a href="/People/ListPeople">List</a></div>
-                <div class="active"><a href="..\HTML\Nombuso.html">Nombuso</a></div>
-                <div class="p-2"><a href="..\HTML\Mbalenhle.html">Mbalenhle</a></div>
-                <div class="p-2"><a href="..\HTML\Nothando.html">Nothando</a></div>
-                <div class="p-2"><a href="..\HTML\Laksa.html">Laska</a></div>
+                <div class="active"><a href="../HTML/Nombuso.html">Nombuso</a></div>
+                <div class="p-2"><a href="../HTML/Laska.html">Laska</a></div>
+                <div class="p-2"><a href="../HTML/Mbalenhle.html">Mbalenhle</a></div>
+                <div class="p-2"><a href="../HTML/Nothando.html">Nothando</a></div>
                 <div class="p-2"><a href="../HTML/Lola.html">Lola</a></div>
-                <div><a href="javascript:history.back()">Back</a></div>
+                <div class="p-2"><a href="javascript:history.back()">Back</a></div>
             </div>
             <hr />
         </div>
@@ -35,65 +42,76 @@
 
     </nav>
 
-    <!-- Biography -->
-    <div class="bio">
-        <h2>Biography and Background</h2>
-        <div class="content-flex">
-            <img class="bio-img" src="..\HTML\Images\Nombuso 3.jpg" alt="Nombuso Image" />
-            <p>
-                Nombuso Mdletshe was born in Durban, and she went to school in Vryheid. 
-                She studies BSc and majors in Human Genetics.
-            </p>
+    <!-- Bootstrap Grid Layout for 3 Sections -->
+
+
+    <div class="row text-center gx-2">
+
+        <!-- Biography Section -->
+        <div class="col-md-4 mb-4 d-flex">
+            <div class="custom-bg p-3 rounded shadow w-100">
+
+
+                <h2 class=" mb-3">Biography and Background</h2>
+                <img src="..\HTML\Images\Nombuso 2.jpeg" alt="Nombuso Image" class="img-fluid float-start me-2 mb-2" style="width: 100px;" />
+                <p>
+                    Nombuso Mdletshe was born in Margate, and she went to school in Pinetown.
+                    She studies BSc and majors in Architecture.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- Hobbies Section -->
+        <div class="col-md-4 mb-4 d-flex">
+            <div class="custom-bg p-3 rounded shadow w-100">
+
+                <h2 class="mb-3">Hobbies</h2>
+                <img src="..\HTML\Images\Nombuso H.jpg" alt="Hobbies Image" class="img-fluid float-end ms-2 mb-2" style="width: 100px;" />
+                <p>
+                    In her spare time, Nombuso enjoys knitting and sewing, finding joy in creating unique designs with every stitch. These crafts provide her with a sense of relaxation and accomplishment as she brings her ideas to life. She takes pride in the patience and precision required, always eager to learn new techniques. With a passion for handmade artistry, Laska embraces the timeless charm of working with yarn and fabric.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- Modules Section -->
+
+        <div class="col-md-4 mb-4 d-flex">
+            <div class="custom-bg p-3 rounded shadow w-100">
+                <h2 class="mb-3">Modules</h2>
+                <table class="table table-sm table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Semester 1</th>
+                            <th>Semester 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                AAL 210<br>
+                                JCP 201<br>
+                                KON 210<br>
+                                OKU 200<br>
+                                OML 210<br>
+                                ONT 200
+                            </td>
+                            <td>
+                                AAL 220<br>
+                                JCP 201<br>
+                                KON 220<br>
+                                OKU 210<br>
+                                OML 220<br>
+                                STU 221
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
-    <!-- Hobbies -->
 
-    <div class="bio hobbies">
-        <h2>Hobbies</h2>
-        <div class="content-flex">
-            <img class="bio-img" src="..\HTML\Images\Nombuso H.jpg" alt="Nombuso Image" />
-            <p>
-                Nombuso finds joy in immersive reading, where every book becomes an adventure. Beyond the pages, she expresses her creativity through crocheting, weaving warmth and artistry into every stitch.
-                The meditative rhythm of her craft provides a sense of relaxation and fulfillment.
-            </p>
-        </div>
-    </div>
-
-
-    <!-- Modules -->
-
-    <div class="bio">
-        <h2>Modules</h2>
-        
-        <table class="table_module">
-            <thead>
-                <tr>
-                    <th>Modules Semester 1</th>
-                    <th>Modules Semester 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        BCM 251<br>
-                        FLG 211<br>
-                        FLG 221 <br>
-                        GTS 251<br>
-                        MBY 251<br>
-                        BCM 257
-                    </td>
-                    <td>
-                        BCM 252<br>
-                        FLG 212<br>
-                        FLG 222 <br>
-                        GTS 261<br>
-                        MBY 261 <br>
-                        BCM 261
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
 </body>
 </html>

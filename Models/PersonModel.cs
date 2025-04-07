@@ -23,5 +23,8 @@ namespace nombusoStudyGroup.Models
         [Display(Name = "Link")]
         public string myLink { get; set; }
 
+        [Display(Name = "Delete")]
+        public string myDelete { get; set; }
+
     }
 }

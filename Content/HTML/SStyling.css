@@ -24,12 +24,28 @@ header {
     flex-wrap: wrap; /* Allows items to move to the next line if needed */
     justify-content: center;
 }
+.custom-bg {
+    background-color: floralwhite;
+    
+}
 
-    .navbar li {
-        display: inline-block;
-        padding: 10px 20px;
-        border-right: 1px solid hotpink; /* Right border for all except last */
-    }
+.customy-bg {
+    background-color: floralwhite;
+    
+}
+.customs-bg {
+    background-color: hotpink;
+    
+}
+
+.customs-bg .active {
+    background-color: hotpink;
+}
+.navbar li {
+    display: inline-block;
+    padding: 10px 20px;
+    border-right: 1px solid hotpink; /* Right border for all except last */
+}
 
         .navbar li:last-child {
             border-right: none; /* No right border for the last item */
@@ -166,6 +182,18 @@ tr {
     flex: 1; /* Allows text to take up space */
 }
 
+#bio-tab{
+    display: inline-flex;
+}
+
+#hobbies-tab{
+    display: inline-flex;
+}
+
+#modules-tab{
+    display: inline-flex;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -219,6 +247,7 @@ tr {
     .hobbies .bio-img {
         margin-left: auto; /* Pushes the image to the right */
     }
+
 
 
 }
